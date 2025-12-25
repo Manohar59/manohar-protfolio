@@ -1,4 +1,5 @@
 import { Github, Linkedin, Download, Mail } from "lucide-react";
+import profileImage from "@/assets/profile.jpg";
 
 const Hero = () => {
   return (
@@ -11,9 +12,11 @@ const Hero = () => {
           {/* Profile Image */}
           <div className="relative floating-animation">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl">
-              <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <span className="text-6xl font-bold gradient-text">KM</span>
-              </div>
+              <img
+                src={profileImage}
+                alt="Kathi Manohar"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="absolute -inset-4 rounded-full bg-primary/10 blur-2xl -z-10"></div>
           </div>
