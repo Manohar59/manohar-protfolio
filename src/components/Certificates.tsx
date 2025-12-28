@@ -33,24 +33,29 @@ const Certificates = () => {
 
         <div className="grid md:grid-cols-3 gap-6">
           {certificates.map((cert, index) => (
-            <a
+            <div
               key={index}
-              href={cert.file}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-card p-6 rounded-xl hover:border-primary/50 transition-all duration-300 group cursor-pointer"
+              className="glass-card p-6 rounded-xl hover:border-primary/50 transition-all duration-300 group"
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className="p-3 rounded-lg bg-primary/10 text-primary">
                   <Award className="w-6 h-6" />
                 </div>
-                <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity ml-auto" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">
                 {cert.title}
               </h3>
-              <p className="text-muted-foreground text-sm">{cert.company}</p>
-            </a>
+              <p className="text-muted-foreground text-sm mb-4">{cert.company}</p>
+              <a
+                href={cert.file}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
+              >
+                <ExternalLink className="w-4 h-4" />
+                View Certificate
+              </a>
+            </div>
           ))}
         </div>
       </div>
