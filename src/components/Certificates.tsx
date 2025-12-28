@@ -1,4 +1,4 @@
-import { Award, ExternalLink } from "lucide-react";
+import { Award, Download } from "lucide-react";
 
 const certificates = [
   {
@@ -46,13 +46,14 @@ const Certificates = () => {
                 {cert.title}
               </h3>
               <p className="text-muted-foreground text-sm mb-4">{cert.company}</p>
-              <button
-                onClick={() => window.open(cert.file, '_blank', 'noopener,noreferrer')}
+              <a
+                href={cert.file}
+                download
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium cursor-pointer"
               >
-                <ExternalLink className="w-4 h-4" />
-                View Certificate
-              </button>
+                <Download className="w-4 h-4" />
+                Download Certificate
+              </a>
             </div>
           ))}
         </div>
