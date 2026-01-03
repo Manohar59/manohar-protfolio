@@ -1,4 +1,4 @@
-import { Award, Download } from "lucide-react";
+import { Award, Download, ExternalLink } from "lucide-react";
 
 const certificates = [
   {
@@ -46,14 +46,25 @@ const Certificates = () => {
                 {cert.title}
               </h3>
               <p className="text-muted-foreground text-sm mb-4">{cert.company}</p>
-              <a
-                href={cert.file}
-                download
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium cursor-pointer"
-              >
-                <Download className="w-4 h-4" />
-                Download Certificate
-              </a>
+              <div className="flex gap-2 flex-wrap">
+                <a
+                  href={cert.file}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary text-primary hover:bg-primary/10 transition-colors text-sm font-medium cursor-pointer"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  View
+                </a>
+                <a
+                  href={cert.file}
+                  download
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium cursor-pointer"
+                >
+                  <Download className="w-4 h-4" />
+                  Download
+                </a>
+              </div>
             </div>
           ))}
         </div>

@@ -1,4 +1,5 @@
 import { Briefcase, GraduationCap } from "lucide-react";
+import aboutImage from "@/assets/about_image.jpg";
 
 const About = () => {
   return (
@@ -11,9 +12,11 @@ const About = () => {
           {/* Image */}
           <div className="flex justify-center fade-in">
             <div className="w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden glass-card p-2">
-              <div className="w-full h-full rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <span className="text-8xl">👨‍💻</span>
-              </div>
+              <img 
+                src={aboutImage} 
+                alt="About Me" 
+                className="w-full h-full rounded-xl object-cover"
+              />
             </div>
           </div>
 
