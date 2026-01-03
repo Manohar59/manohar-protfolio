@@ -33,13 +33,14 @@ const Hero = () => {
 
             {/* Buttons */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
-              <button
+              <a
+                href="/Manohar_Resume.pdf"
+                download
                 className="btn-outline flex items-center gap-2"
-                onClick={() => window.open("./assets/ManoharResume.pdf")}
               >
                 <Download size={20} />
                 My Resume
-              </button>
+              </a>
               <a href="#contact" className="btn-primary flex items-center gap-2">
                 <Mail size={20} />
                 Contact Info
