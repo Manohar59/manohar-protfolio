@@ -1,22 +1,25 @@
 import { Github, ExternalLink } from "lucide-react";
+import projectSms from "@/assets/project_sms.jpg";
+import projectLab from "@/assets/project_lab.jpg";
+import projectDriver from "@/assets/project_driver.jpg";
 
 const Projects = () => {
   const projects = [
     {
       title: "Scam SMS Detection",
-      image: "🔍",
+      image: projectSms,
       github: "https://github.com/Manohar59/codsoft",
       demo: "https://github.com/Manohar59/codsoft",
     },
     {
       title: "Online Diagnostic Reporting",
-      image: "🏥",
+      image: projectLab,
       github: "https://github.com/Manohar59/online_diagnostic_reporting",
       demo: "https://github.com/Manohar59/online_diagnostic_reporting",
     },
     {
       title: "Drowsiness Detection System",
-      image: "😴",
+      image: projectDriver,
       github: "https://github.com/Manohar59/drowsiness-detection-system",
       demo: "https://github.com/Manohar59/drowsiness-detection-system",
     },
@@ -36,8 +39,12 @@ const Projects = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Project Image */}
-              <div className="h-48 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl mb-6 flex items-center justify-center">
-                <span className="text-6xl">{project.image}</span>
+              <div className="h-48 rounded-xl mb-6 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Project Info */}
