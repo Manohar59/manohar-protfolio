@@ -3,7 +3,7 @@ import aboutImage from "@/assets/about_image.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-6">
+    <section id="about" className="py-10 px-6">
       <div className="container mx-auto max-w-6xl">
         <p className="section-subtitle">Get To Know More</p>
         <h2 className="section-title">About Me</h2>

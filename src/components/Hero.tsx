@@ -1,11 +1,11 @@
-import { Github, Linkedin, Download, Mail } from "lucide-react";
+import { Github, Linkedin, Download, Mail, Eye } from "lucide-react";
 import profileImage from "@/assets/profile.jpg";
 
 const Hero = () => {
   return (
     <section
       id="profile"
-      className="min-h-screen flex items-center justify-center pt-20 px-6"
+      className="min-h-[80vh] flex items-center justify-center pt-20 px-6"
     >
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
@@ -35,11 +35,20 @@ const Hero = () => {
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
               <a
                 href="/Manohar_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline flex items-center gap-2"
+              >
+                <Eye size={20} />
+                View Resume
+              </a>
+              <a
+                href="/Manohar_Resume.pdf"
                 download
                 className="btn-outline flex items-center gap-2"
               >
                 <Download size={20} />
-                My Resume
+                Download Resume
               </a>
               <a href="#contact" className="btn-primary flex items-center gap-2">
                 <Mail size={20} />
