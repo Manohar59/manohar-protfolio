@@ -7,7 +7,6 @@ const Experience = () => {
     "JavaScript",
     "SQL",
     "React",
-    "Bootstrap & TailwindCSS",
   ];
 
   const backendSkills = [
@@ -15,8 +14,6 @@ const Experience = () => {
     "Express JS",
     "MongoDB",
     "MySQL",
-    "Mongoose",
-    "RESTful APIs",
     "Git & Github",
   ];
 
@@ -26,7 +23,7 @@ const Experience = () => {
     <section id="experience" className="py-20 px-6 bg-secondary/20">
       <div className="container mx-auto max-w-6xl">
         <p className="section-subtitle">Explore My</p>
-        <h2 className="section-title">Experience</h2>
+        <h2 className="section-title">Skills</h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {/* Languages & Frontend */}

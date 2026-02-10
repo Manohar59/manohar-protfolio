@@ -1,4 +1,4 @@
-import { Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -7,7 +7,7 @@ const Contact = () => {
         <p className="section-subtitle">Get in Touch</p>
         <h2 className="section-title">Contact Me</h2>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-6 mt-12">
+        <div className="flex flex-col sm:flex-row justify-center gap-6 mt-12 flex-wrap">
           {/* Email */}
           <a
             href="mailto:kathimanohar621@gmail.com"
@@ -37,6 +37,17 @@ const Contact = () => {
               <p className="font-medium">kathi-manohar</p>
             </div>
           </a>
+
+          {/* Location */}
+          <div className="glass-card flex items-center gap-4">
+            <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+              <MapPin size={24} />
+            </div>
+            <div>
+              <p className="text-sm text-muted-foreground">Location</p>
+              <p className="font-medium">Hyderabad</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
