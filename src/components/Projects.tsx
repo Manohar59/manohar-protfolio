@@ -2,6 +2,8 @@ import { Github, ExternalLink } from "lucide-react";
 import projectSms from "@/assets/project_sms.jpg";
 import projectLab from "@/assets/project_lab.jpg";
 import projectDriver from "@/assets/project_driver.jpg";
+import projectFace from "@/assets/project_face.jpg";
+import projectNetflix from "@/assets/project_netflix.webp";
 
 const Projects = () => {
   const projects = [
@@ -22,6 +24,18 @@ const Projects = () => {
       image: projectDriver,
       github: "https://github.com/Manohar59/drowsiness-detection-system",
       demo: "https://github.com/Manohar59/drowsiness-detection-system",
+    },
+    {
+      title: "Face Recognition Attendance System",
+      image: projectFace,
+      github: "https://github.com/Manohar59/Face-Recognition-Attendance-Management-System",
+      demo: "https://github.com/Manohar59/Face-Recognition-Attendance-Management-System",
+    },
+    {
+      title: "Netflix Data Analysis",
+      image: projectNetflix,
+      github: "https://github.com/Manohar59/VOIS_AICTE_Oct2025_MajorProject_Kathi-Manohar",
+      demo: "https://github.com/Manohar59/VOIS_AICTE_Oct2025_MajorProject_Kathi-Manohar",
     },
   ];
 
