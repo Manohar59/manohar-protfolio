@@ -16,6 +16,16 @@ const internshipCertificates = [
     company: "VOIs & Vodafone Idea Foundation",
     file: "/certificates/Manohar_Vois_Edunet.pdf",
   },
+  {
+    title: "Python Programming",
+    company: "CodeAlpha",
+    file: "/certificates/Manohar_Codealpha.pdf",
+  },
+  {
+    title: "Java Programming",
+    company: "Vaultofcodes",
+    file: "/certificates/Manohar_Vaultofcodes_Certificate.pdf",
+  },
 ];
 
 const professionalCertificates = [
@@ -86,7 +96,7 @@ const Certificates = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {internshipCertificates.map((cert, index) => (
             <CertCard key={index} cert={cert} />
           ))}
