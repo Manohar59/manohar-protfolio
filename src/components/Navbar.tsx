@@ -132,7 +132,7 @@ const Navbar = () => {
                   <input
                     name="name"
                     type="text"
-                    placeholder=""
+                    placeholder="Manohar"
                     required
                     className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                   />
@@ -142,7 +142,7 @@ const Navbar = () => {
                   <input
                     name="email"
                     type="email"
-                    placeholder=""
+                    placeholder="example@gmail.com"
                     required
                     className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                   />
@@ -151,9 +151,9 @@ const Navbar = () => {
               <div>
                 <label className="text-sm font-medium text-foreground mb-1 block">Subject</label>
                 <input
-                  name="subject"
+                   name="subject"
                   type="text"
-                  placeholder=""
+                  placeholder="Project Inquiry"
                   required
                   className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                 />
@@ -162,7 +162,7 @@ const Navbar = () => {
                 <label className="text-sm font-medium text-foreground mb-1 block">Message</label>
                 <textarea
                   name="message"
-                  placeholder=""
+                  placeholder="Hi, I'd like to discuss about Project or else."
                   rows={4}
                   required
                   className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
