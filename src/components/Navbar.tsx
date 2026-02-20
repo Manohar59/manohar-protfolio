@@ -35,25 +35,27 @@ const Navbar = () => {
               Manohar!
             </a>
 
-            {/* Desktop Nav */}
-            <ul className="hidden md:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <a href={link.href} className="nav-link text-lg">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            {/* Desktop Nav + Hamburger */}
+            <div className="flex items-center gap-8">
+              <ul className="hidden md:flex items-center gap-8">
+                {navLinks.map((link) => (
+                  <li key={link.href}>
+                    <a href={link.href} className="nav-link text-lg">
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
 
-            {/* Hamburger Menu Button */}
-            <button
+              {/* Hamburger Menu Button */}
+              <button
               className="text-foreground"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
+                {isOpen ? <X size={28} /> : <Menu size={28} />}
+              </button>
+            </div>
           </div>
         </div>
       </nav>
@@ -130,7 +132,7 @@ const Navbar = () => {
                   <input
                     name="name"
                     type="text"
-                    placeholder="John Doe"
+                    placeholder=""
                     required
                     className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                   />
@@ -140,7 +142,7 @@ const Navbar = () => {
                   <input
                     name="email"
                     type="email"
-                    placeholder="john@example.com"
+                    placeholder=""
                     required
                     className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                   />
@@ -151,7 +153,7 @@ const Navbar = () => {
                 <input
                   name="subject"
                   type="text"
-                  placeholder="Project Inquiry"
+                  placeholder=""
                   required
                   className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                 />
@@ -160,7 +162,7 @@ const Navbar = () => {
                 <label className="text-sm font-medium text-foreground mb-1 block">Message</label>
                 <textarea
                   name="message"
-                  placeholder="Hello, I'd like to discuss..."
+                  placeholder=""
                   rows={4}
                   required
                   className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
