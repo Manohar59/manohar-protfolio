@@ -9,16 +9,24 @@ const Hero = () => {
     >
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
-          {/* Profile Image */}
+          {/* Profile Image with Blob Background */}
           <div className="relative floating-animation">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl">
+            {/* Blob shape behind the image */}
+            <div className="absolute inset-0 flex items-center justify-center -z-10">
+              <svg viewBox="0 0 500 500" className="w-[120%] h-[120%] absolute" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99.5,351Q40,295,40,230Q40,165,86,107.5Q132,50,202,5.5Q272,-39,331,27Q390,93,428,156.5Q466,220,440.5,320.5Z"
+                  fill="hsl(var(--primary) / 0.3)"
+                />
+              </svg>
+            </div>
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl relative z-10">
               <img
                 src={profileImage}
                 alt="Kathi Manohar"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -inset-4 rounded-full bg-primary/10 blur-2xl -z-10"></div>
           </div>
 
           {/* Text Content */}
