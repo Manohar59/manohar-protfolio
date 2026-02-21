@@ -132,9 +132,9 @@ const Navbar = () => {
                   <input
                     name="name"
                     type="text"
-                    defaultValue="Manohar"
+                    placeholder="Manohar"
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border text-foreground focus:outline-none focus:border-primary transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                   />
                 </div>
                 <div>
@@ -142,9 +142,9 @@ const Navbar = () => {
                   <input
                     name="email"
                     type="email"
-                    defaultValue="example@gmail.com"
+                    placeholder="example@gmail.com"
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border text-foreground focus:outline-none focus:border-primary transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                   />
                 </div>
               </div>
@@ -153,19 +153,19 @@ const Navbar = () => {
                 <input
                    name="subject"
                   type="text"
-                  defaultValue="Project Inquiry"
+                  placeholder="Project Inquiry"
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border text-foreground focus:outline-none focus:border-primary transition-colors"
+                  className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
                 />
               </div>
               <div>
                 <label className="text-sm font-medium text-foreground mb-1 block">Message</label>
                 <textarea
                   name="message"
-                  defaultValue="Hello, I'd like to discuss about Project or else."
+                  placeholder="Hello, I'd like to discuss about Project or else."
                   rows={4}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border text-foreground focus:outline-none focus:border-primary transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
                 />
               </div>
               <button
