@@ -75,9 +75,15 @@ const Projects = () => {
               </div>
 
               {/* Project Info */}
-              <h3 className="text-xl font-semibold mb-4 text-center">
+              <h3 className="text-xl font-semibold mb-2 text-center">
                 {project.title}
               </h3>
+              {project.description && (
+                <p className="text-sm text-muted-foreground text-center mb-4 px-2">
+                  {project.description}
+                </p>
+              )}
+              {!project.description && <div className="mb-4" />}
 
               {/* Buttons */}
               <div className="flex justify-center gap-4">
