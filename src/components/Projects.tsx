@@ -77,58 +77,56 @@ const projects = [
 
 const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: number }) => (
   <div
-    className="group relative flex flex-col md:flex-row rounded-2xl border border-border bg-card/60 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_40px_hsl(173_80%_50%/0.15),0_10px_40px_hsl(0_0%_0%/0.3)] fade-in"
+    className="glass-card overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_40px_hsl(173_80%_50%/0.15),0_10px_40px_hsl(0_0%_0%/0.3)] fade-in"
     style={{ animationDelay: `${index * 0.1}s` }}
   >
-    {/* Left - Image */}
-    <div className="md:w-[42%] w-full h-56 md:h-auto overflow-hidden">
+    {/* Image */}
+    <div className="w-full h-52 overflow-hidden">
       <img
         src={project.image}
         alt={project.title}
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
       />
     </div>
 
-    {/* Right - Content */}
-    <div className="md:w-[58%] w-full p-6 md:p-8 flex flex-col justify-between gap-4">
-      <div>
-        <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{project.title}</h3>
-        <p className="text-muted-foreground text-sm leading-relaxed mb-4">{project.description}</p>
+    {/* Content */}
+    <div className="p-6 flex flex-col gap-3">
+      <h3 className="text-xl font-bold text-foreground">{project.title}</h3>
+      <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
 
-        {/* Problem & Solution */}
-        <div className="space-y-2 mb-4">
-          <div className="flex items-start gap-2">
-            <AlertTriangle className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" />
-            <p className="text-sm"><span className="text-amber-400 font-semibold">Problem:</span>{" "}
-              <span className="text-muted-foreground">{project.problem}</span>
-            </p>
-          </div>
-          <div className="flex items-start gap-2">
-            <CheckCircle className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-            <p className="text-sm"><span className="text-primary font-semibold">Solution:</span>{" "}
-              <span className="text-muted-foreground">{project.solution}</span>
-            </p>
-          </div>
-        </div>
-
-        {/* Tech Stack */}
-        <div className="flex items-center gap-2 flex-wrap mb-3">
-          <Brain className="w-4 h-4 text-primary shrink-0" />
-          <span className="text-sm font-semibold text-primary">Tech:</span>
-          {project.tech.map((t) => (
-            <span key={t} className="px-2.5 py-0.5 text-xs font-medium rounded-full bg-primary/15 text-primary border border-primary/30">
-              {t}
-            </span>
-          ))}
-        </div>
-
-        {/* Impact */}
+      {/* Problem & Solution */}
+      <div className="space-y-2">
         <div className="flex items-start gap-2">
-          <TrendingUp className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-          <p className="text-sm"><span className="text-primary font-semibold">Impact:</span>{" "}
-            <span className="text-muted-foreground">{project.impact}</span>
+          <AlertTriangle className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" />
+          <p className="text-sm"><span className="text-amber-400 font-semibold">Problem:</span>{" "}
+            <span className="text-muted-foreground">{project.problem}</span>
           </p>
         </div>
+        <div className="flex items-start gap-2">
+          <CheckCircle className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+          <p className="text-sm"><span className="text-primary font-semibold">Solution:</span>{" "}
+            <span className="text-muted-foreground">{project.solution}</span>
+          </p>
+        </div>
+      </div>
+
+      {/* Tech Stack */}
+      <div className="flex items-center gap-2 flex-wrap">
+        <Brain className="w-4 h-4 text-primary shrink-0" />
+        <span className="text-sm font-semibold text-primary">Tech:</span>
+        {project.tech.map((t) => (
+          <span key={t} className="px-2.5 py-0.5 text-xs font-medium rounded-full bg-primary/15 text-primary border border-primary/30">
+            {t}
+          </span>
+        ))}
+      </div>
+
+      {/* Impact */}
+      <div className="flex items-start gap-2">
+        <TrendingUp className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+        <p className="text-sm"><span className="text-primary font-semibold">Impact:</span>{" "}
+          <span className="text-muted-foreground">{project.impact}</span>
+        </p>
       </div>
 
       {/* Buttons */}
@@ -163,7 +161,7 @@ const Projects = () => {
         <p className="section-subtitle">Browse My Recent</p>
         <h2 className="section-title">Projects</h2>
 
-        <div className="flex flex-col gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +37,7 @@ const Navbar = () => {
             </a>
 
             {/* Desktop Nav + Hamburger */}
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-4">
               <ul className="hidden md:flex items-center gap-8">
                 {navLinks.map((link) => (
                   <li key={link.href}>
@@ -46,6 +47,8 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
+
+              <ThemeToggle />
 
               {/* Hamburger Menu Button */}
               <button
