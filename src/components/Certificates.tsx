@@ -35,6 +35,11 @@ const professionalCertificates = [
     file: "/certificates/Manohar_oracle_certificate_pdf.pdf",
   },
   {
+    title: "Infosys Springboard Certification",
+    company: "Infosys",
+    file: "/certificates/Manohar_Infosys_springbroad.pdf",
+  },
+  {
     title: "Data Analytics",
     company: "OneRoadMap",
     file: "/certificates/Data_Analyst_OneRoadMap-Certificate.pdf",

@@ -98,14 +98,14 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
         {/* Problem & Solution */}
         <div className="space-y-2 mb-4">
           <div className="flex items-start gap-2">
-            <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 shrink-0" />
-            <p className="text-sm"><span className="text-yellow-400 font-semibold">Problem:</span>{" "}
+            <AlertTriangle className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" />
+            <p className="text-sm"><span className="text-amber-400 font-semibold">Problem:</span>{" "}
               <span className="text-muted-foreground">{project.problem}</span>
             </p>
           </div>
           <div className="flex items-start gap-2">
-            <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
-            <p className="text-sm"><span className="text-emerald-400 font-semibold">Solution:</span>{" "}
+            <CheckCircle className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+            <p className="text-sm"><span className="text-primary font-semibold">Solution:</span>{" "}
               <span className="text-muted-foreground">{project.solution}</span>
             </p>
           </div>
