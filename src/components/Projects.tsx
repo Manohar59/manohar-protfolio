@@ -4,38 +4,51 @@ import projectLab from "@/assets/project_lab.jpg";
 import projectDriver from "@/assets/project_driver.jpg";
 import projectFace from "@/assets/project_face.jpg";
 import projectNetflix from "@/assets/project_netflix.webp";
+import projectLiveness from "@/assets/project_liveness.png";
 
 const Projects = () => {
   const projects = [
     {
       title: "Scam SMS Detection",
       image: projectSms,
+      description: "",
       github: "https://github.com/Manohar59/codsoft",
       demo: "https://github.com/Manohar59/codsoft",
     },
     {
       title: "Online Diagnostic Reporting",
       image: projectLab,
+      description: "",
       github: "https://github.com/Manohar59/online_diagnostic_reporting",
       demo: "https://github.com/Manohar59/online_diagnostic_reporting",
     },
     {
       title: "Drowsiness Detection System",
       image: projectDriver,
+      description: "",
       github: "https://github.com/Manohar59/drowsiness-detection-system",
       demo: "https://github.com/Manohar59/drowsiness-detection-system",
     },
     {
       title: "Face Recognition Attendance System",
       image: projectFace,
+      description: "",
       github: "https://github.com/Manohar59/Face-Recognition-Attendance-Management-System",
       demo: "https://github.com/Manohar59/Face-Recognition-Attendance-Management-System",
     },
     {
       title: "Netflix Data Analysis",
       image: projectNetflix,
+      description: "",
       github: "https://github.com/Manohar59/VOIS_AICTE_Oct2025_MajorProject_Kathi-Manohar",
       demo: "https://github.com/Manohar59/VOIS_AICTE_Oct2025_MajorProject_Kathi-Manohar",
+    },
+    {
+      title: "🎥 Face Liveness Detection System",
+      image: projectLiveness,
+      description: "Prevents spoof attacks by detecting real vs fake faces using real-time video input. ⚙️ Tech: Python, OpenCV, Deep Learning | 📈 Impact: Improves security in face recognition systems",
+      github: "https://github.com/Manohar59/Face-Liveness-Detection-Major",
+      demo: "https://github.com/Manohar59/Face-Liveness-Detection-Major",
     },
   ];
 
